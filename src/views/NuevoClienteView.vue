@@ -57,20 +57,3 @@ const handleSubmit = (data) => {
 
     </div>
 </template>
-
-<style>
-
-.formkit-wrapper {
-
-    max-width: 100%;
-}
-
-[data-type="submit"] .formkit-input {
-    margin-top: 25px;
-}
-[data-type="submit"] .formkit-input:hover {
-    background-color: #4f46e5;
-    color: white;
-   
-}
-</style>

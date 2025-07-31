@@ -14,6 +14,8 @@ import { RouterView } from 'vue-router'
   </main>
 </template>
 
-<style scoped>
-
+<style>
+.formkit-wrapper {
+    max-width: 100%;
+}
 </style>

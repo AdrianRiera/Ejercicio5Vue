@@ -28,6 +28,29 @@ onMounted(() => {
 
 // Computado para saber si hay clientes
 const existenClientes = computed(() => clientes.value.length > 0)
+
+const actualizarEstadoCliente = (data) => {
+  const nuevoEstado = !data.estado
+  
+  ClienteService.cambiarEstadoCliente(data.id, { estado: nuevoEstado })
+    .then(() => {
+      const i = clientes.value.findIndex(cliente => cliente.id === data.id)
+      clientes.value[i].estado = nuevoEstado
+    })
+    .catch(error => {
+      console.error('Error al actualizar el estado del cliente:', error)
+    })
+}
+
+const eliminarCliente = (id) => {
+  ClienteService.eliminarCliente(id)
+    .then(() => {
+      clientes.value = clientes.value.filter(cliente => cliente.id !== id)
+    })
+    .catch(error => {
+      console.error('Error al eliminar el cliente:', error)
+    })
+}
 </script>
 
 
@@ -52,9 +75,10 @@ const existenClientes = computed(() => clientes.value.length > 0)
                         </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 bg-white">
-                        <Cliente v-for="cliente in clientes" :key="cliente.id"  :cliente="cliente">
-                       
-                        </Cliente>
+                        <Cliente v-for="cliente in clientes" :key="cliente.id"  :cliente="cliente"
+                        @actualizar-estado="actualizarEstadoCliente"
+                        @eliminar-cliente="eliminarCliente"
+                        ></Cliente>
                         </tbody>
                     </table>
                 </div>
@@ -64,4 +88,3 @@ const existenClientes = computed(() => clientes.value.length > 0)
 
     </div>
 </template>
-

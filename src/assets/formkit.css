@@ -1,0 +1,17 @@
+/* Estilos globales para FormKit */
+.formkit-wrapper {
+    max-width: 100% !important;
+}
+
+/* Estilos para botones de submit */
+.formkit-form [data-type="submit"] .formkit-input {
+    margin-top: 25px !important;
+    background-color: #6366f1;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.formkit-form [data-type="submit"] .formkit-input:hover {
+    background-color: #4f46e5 !important;
+    color: white !important;
+}

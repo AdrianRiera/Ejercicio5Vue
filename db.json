@@ -1,44 +1,24 @@
 {
   "clientes": [
     {
-      "id": 1,
-      "nombre": "Adrian",
-      "apellido": "Grd",
-      "email": "adrian@example.com",
-      "telefono": "123456789",
-      "empresa": "Ejemplo S.A.",
-      "puesto": "Desarrollador",
-      "estado": true
-    },
-    {
-      "id": "8be1",
       "nombre": "Adrian",
       "apellido": "ssss",
-      "email": "adrian@grdar.com",
+      "email": "adrian@prueba.com",
       "telefono": "666666666",
       "empresa": "ssss",
       "puesto": "sssss",
-      "estado": true
+      "estado": true,
+      "id": "8be1"
     },
     {
-      "id": "be83",
-      "nombre": "AWS",
-      "apellido": "ssss",
-      "email": "adrianrieragranada@gmail.com",
-      "telefono": "666666666",
-      "empresa": "ssss",
-      "puesto": "sssss",
-      "estado": true
-    },
-    {
-      "id": "3ece",
       "nombre": "Adrian1",
       "apellido": "XXX",
-      "email": "DDD@grdar.es",
+      "email": "prueba1@gmail.com",
       "telefono": "666666666",
       "empresa": "XXXX",
       "puesto": "AAA",
-      "estado": false
+      "estado": false,
+      "id": "3ece"
     }
   ]
 }
